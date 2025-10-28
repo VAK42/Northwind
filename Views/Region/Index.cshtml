@@ -1,0 +1,25 @@
+﻿@model IEnumerable<VAK.Models.Region>
+
+<table class="border">
+  <thead>
+  <tr>
+    <th>Region ID</th>
+    <th>Region Description</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model) {
+    <tr>
+      <td>@item.RegionId</td>
+      <td>@item.RegionDescription</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.RegionId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.RegionId })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+
+<p>@Html.ActionLink("Create New", "Create")</p>

@@ -1,0 +1,11 @@
+﻿@model VAK.Models.Territories
+
+@using (Html.BeginForm()) {
+  @Html.Label("Territory Description")
+  @Html.TextBoxFor(m => m.TerritoryDescription)
+
+  @Html.Label("Region ID")
+  @Html.TextBoxFor(m => m.RegionId)
+
+  <input type="submit" value="Save" />
+}

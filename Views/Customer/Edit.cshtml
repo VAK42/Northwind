@@ -1,0 +1,62 @@
+﻿@model VAK.Models.Customers
+
+@using (Html.BeginForm()) {
+@Html.AntiForgeryToken()
+
+<div>
+  <label>Customer ID</label>
+  @Html.TextBoxFor(model => model.CustomerId, new { @readonly = "readonly" })
+</div>
+
+<div>
+  <label>Company Name</label>
+  @Html.TextBoxFor(model => model.CompanyName)
+</div>
+
+<div>
+  <label>Contact Name</label>
+  @Html.TextBoxFor(model => model.ContactName)
+</div>
+
+<div>
+  <label>Contact Title</label>
+  @Html.TextBoxFor(model => model.ContactTitle)
+</div>
+
+<div>
+  <label>Address</label>
+  @Html.TextBoxFor(model => model.Address)
+</div>
+
+<div>
+  <label>City</label>
+  @Html.TextBoxFor(model => model.City)
+</div>
+
+<div>
+  <label>Region</label>
+  @Html.TextBoxFor(model => model.Region)
+</div>
+
+<div>
+  <label>Postal Code</label>
+  @Html.TextBoxFor(model => model.PostalCode)
+</div>
+
+<div>
+  <label>Country</label>
+  @Html.TextBoxFor(model => model.Country)
+</div>
+
+<div>
+  <label>Phone</label>
+  @Html.TextBoxFor(model => model.Phone)
+</div>
+
+<div>
+  <label>Fax</label>
+  @Html.TextBoxFor(model => model.Fax)
+</div>
+
+<input type="submit" value="Save" />
+}

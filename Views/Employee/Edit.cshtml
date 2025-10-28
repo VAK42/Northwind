@@ -1,0 +1,52 @@
+﻿@model VAK.Models.Employees
+
+@using (Html.BeginForm()) {
+  @Html.HiddenFor(m => m.EmployeeId)
+
+  @Html.Label("Last Name")
+  @Html.TextBoxFor(m => m.LastName)
+
+  @Html.Label("First Name")
+  @Html.TextBoxFor(m => m.FirstName)
+
+  @Html.Label("Title")
+  @Html.TextBoxFor(m => m.Title)
+
+  @Html.Label("Title of Courtesy")
+  @Html.TextBoxFor(m => m.TitleOfCourtesy)
+
+  @Html.Label("Birth Date")
+  @Html.TextBoxFor(m => m.BirthDate)
+
+  @Html.Label("Hire Date")
+  @Html.TextBoxFor(m => m.HireDate)
+
+  @Html.Label("Address")
+  @Html.TextBoxFor(m => m.Address)
+
+  @Html.Label("City")
+  @Html.TextBoxFor(m => m.City)
+
+  @Html.Label("Region")
+  @Html.TextBoxFor(m => m.Region)
+
+  @Html.Label("Postal Code")
+  @Html.TextBoxFor(m => m.PostalCode)
+
+  @Html.Label("Country")
+  @Html.TextBoxFor(m => m.Country)
+
+  @Html.Label("Home Phone")
+  @Html.TextBoxFor(m => m.HomePhone)
+
+  @Html.Label("Extension")
+  @Html.TextBoxFor(m => m.Extension)
+
+  @Html.Label("Notes")
+  @Html.TextBoxFor(m => m.Notes)
+
+  @Html.Label("Reports To")
+  @Html.TextBoxFor(m => m.ReportsTo)
+
+  <input type="submit" value="Update" />
+}

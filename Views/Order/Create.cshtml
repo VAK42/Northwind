@@ -1,0 +1,47 @@
+﻿@model VAK.Models.Orders
+
+@using (Html.BeginForm()) {
+  @Html.LabelFor(m => m.OrderId)
+  @Html.TextBoxFor(m => m.OrderId)
+
+  @Html.Label("Customer ID")
+  @Html.TextBoxFor(m => m.CustomerId)
+
+  @Html.Label("Employee ID")
+  @Html.TextBoxFor(m => m.EmployeeId)
+
+  @Html.Label("Order Date")
+  @Html.TextBoxFor(m => m.OrderDate)
+
+  @Html.Label("Required Date")
+  @Html.TextBoxFor(m => m.RequiredDate)
+
+  @Html.Label("Shipped Date")
+  @Html.TextBoxFor(m => m.ShippedDate)
+
+  @Html.Label("Ship Via")
+  @Html.TextBoxFor(m => m.ShipVia)
+
+  @Html.Label("Freight")
+  @Html.TextBoxFor(m => m.Freight)
+
+  @Html.Label("Ship Name")
+  @Html.TextBoxFor(m => m.ShipName)
+
+  @Html.Label("Ship Address")
+  @Html.TextBoxFor(m => m.ShipAddress)
+
+  @Html.Label("Ship City")
+  @Html.TextBoxFor(m => m.ShipCity)
+
+  @Html.Label("Ship Region")
+  @Html.TextBoxFor(m => m.ShipRegion)
+
+  @Html.Label("Ship Postal Code")
+  @Html.TextBoxFor(m => m.ShipPostalCode)
+
+  @Html.Label("Ship Country")
+  @Html.TextBoxFor(m => m.ShipCountry)
+
+  <input type="submit" value="Save" />
+}

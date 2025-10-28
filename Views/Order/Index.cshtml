@@ -1,0 +1,49 @@
+﻿@model IEnumerable<VAK.Models.Orders>
+
+<table class="border">
+  <thead>
+  <tr>
+    <th>Order ID</th>
+    <th>Customer ID</th>
+    <th>Employee ID</th>
+    <th>Order Date</th>
+    <th>Required Date</th>
+    <th>Shipped Date</th>
+    <th>Ship Via</th>
+    <th>Freight</th>
+    <th>Ship Name</th>
+    <th>Ship Address</th>
+    <th>Ship City</th>
+    <th>Ship Region</th>
+    <th>Ship Postal Code</th>
+    <th>Ship Country</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model) {
+    <tr>
+      <td>@item.OrderId</td>
+      <td>@item.CustomerId</td>
+      <td>@item.EmployeeId</td>
+      <td>@item.OrderDate</td>
+      <td>@item.RequiredDate</td>
+      <td>@item.ShippedDate</td>
+      <td>@item.ShipVia</td>
+      <td>@item.Freight</td>
+      <td>@item.ShipName</td>
+      <td>@item.ShipAddress</td>
+      <td>@item.ShipCity</td>
+      <td>@item.ShipRegion</td>
+      <td>@item.ShipPostalCode</td>
+      <td>@item.ShipCountry</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+
+<p>@Html.ActionLink("Create New", "Create")</p>

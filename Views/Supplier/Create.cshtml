@@ -1,0 +1,38 @@
+﻿@model VAK.Models.Suppliers
+
+@using (Html.BeginForm()) {
+  @Html.Label("Company Name")
+  @Html.TextBoxFor(m => m.CompanyName)
+
+  @Html.Label("Contact Name")
+  @Html.TextBoxFor(m => m.ContactName)
+
+  @Html.Label("Contact Title")
+  @Html.TextBoxFor(m => m.ContactTitle)
+
+  @Html.Label("Address")
+  @Html.TextBoxFor(m => m.Address)
+
+  @Html.Label("City")
+  @Html.TextBoxFor(m => m.City)
+
+  @Html.Label("Region")
+  @Html.TextBoxFor(m => m.Region)
+
+  @Html.Label("Postal Code")
+  @Html.TextBoxFor(m => m.PostalCode)
+
+  @Html.Label("Country")
+  @Html.TextBoxFor(m => m.Country)
+
+  @Html.Label("Phone")
+  @Html.TextBoxFor(m => m.Phone)
+
+  @Html.Label("Fax")
+  @Html.TextBoxFor(m => m.Fax)
+
+  @Html.Label("Homepage")
+  @Html.TextBoxFor(m => m.Homepage)
+
+  <input type="submit" value="Save" />
+}

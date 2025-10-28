@@ -1,0 +1,27 @@
+﻿@model IEnumerable<VAK.Models.Categories>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Category Name</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>@item.CategoryId</td>
+      <td>@item.CategoryName</td>
+      <td>@item.Description</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CategoryId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CategoryId })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+<a href="@Url.Action("Create")">Create New</a>

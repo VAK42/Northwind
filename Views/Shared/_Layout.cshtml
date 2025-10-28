@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@ViewBag.Title - VAK</title>
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="margin: 0; padding: 0;">
+<div class="container-fluid p-0">
+  @if (Session["UserLoggedIn"] != null && (bool)Session["UserLoggedIn"])
+  {
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto" style="width: 100%; display: flex; justify-content: space-between;">
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Home")" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Customer")" style="color: white;">Customers</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Category")" style="color: white;">Categories</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Employee")" style="color: white;">Employees</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Order")" style="color: white;">Orders</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "OrderDetail")" style="color: white;">Order Details</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Product")" style="color: white;">Products</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Region")" style="color: white;">Regions</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Shipper")" style="color: white;">Shippers</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Supplier")" style="color: white;">Suppliers</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Index", "Territory")" style="color: white;">Territories</a>
+            </li>
+            <li class="nav-item" style="width: 8.33%; text-align: center;">
+              <a class="nav-link" href="@Url.Action("Logout", "Home")" style="color: white;">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  }
+
+  <div class="container-fluid p-0">
+    @RenderBody()
+    <hr/>
+    <footer>
+      <p>@DateTime.Now.2025 - VAK</p>
+    </footer>
+  </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", required: false)
+</body>
+</html>

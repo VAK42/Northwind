@@ -1,0 +1,32 @@
+﻿@model VAK.Models.Products
+
+@using (Html.BeginForm()) {
+  @Html.Label("Product Name")
+  @Html.TextBoxFor(m => m.ProductName)
+
+  @Html.Label("Supplier ID")
+  @Html.TextBoxFor(m => m.SupplierId)
+
+  @Html.Label("Category ID")
+  @Html.TextBoxFor(m => m.CategoryId)
+
+  @Html.Label("Quantity per Unit")
+  @Html.TextBoxFor(m => m.QuantityPerUnit)
+
+  @Html.Label("Unit Price")
+  @Html.TextBoxFor(m => m.UnitPrice)
+
+  @Html.Label("Units In Stock")
+  @Html.TextBoxFor(m => m.UnitsInStock)
+
+  @Html.Label("Units On Order")
+  @Html.TextBoxFor(m => m.UnitsOnOrder)
+
+  @Html.Label("Reorder Level")
+  @Html.TextBoxFor(m => m.ReorderLevel)
+
+  @Html.Label("Discontinued")
+  @Html.TextBoxFor(m => m.Discontinued)
+
+  <input type="submit" value="Save" />
+}

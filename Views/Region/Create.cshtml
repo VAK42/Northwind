@@ -1,0 +1,8 @@
+﻿@model VAK.Models.Region
+
+@using (Html.BeginForm()) {
+  @Html.Label("Region Description")
+  @Html.TextBoxFor(m => m.RegionDescription)
+
+  <input type="submit" value="Save" />
+}

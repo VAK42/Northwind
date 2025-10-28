@@ -1,0 +1,22 @@
+﻿@model VAK.Models.Categories
+
+@using (Html.BeginForm()) {
+  @Html.AntiForgeryToken()
+
+  <div>
+    <label>Category ID</label>
+    @Html.TextBoxFor(model => model.CategoryId)
+  </div>
+
+  <div>
+    <label>Category Name</label>
+    @Html.TextBoxFor(model => model.CategoryName)
+  </div>
+
+  <div>
+    <label>Description</label>
+    @Html.TextBoxFor(model => model.Description)
+  </div>
+
+  <input type="submit" value="Create" />
+}

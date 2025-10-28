@@ -1,0 +1,43 @@
+﻿@model IEnumerable<VAK.Models.Customers>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Customer ID</th>
+    <th>Company Name</th>
+    <th>Contact Name</th>
+    <th>Contact Title</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Region</th>
+    <th>Postal Code</th>
+    <th>Country</th>
+    <th>Phone</th>
+    <th>Fax</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model) {
+    <tr>
+      <td>@item.CustomerId</td>
+      <td>@item.CompanyName</td>
+      <td>@item.ContactName</td>
+      <td>@item.ContactTitle</td>
+      <td>@item.Address</td>
+      <td>@item.City</td>
+      <td>@item.Region</td>
+      <td>@item.PostalCode</td>
+      <td>@item.Country</td>
+      <td>@item.Phone</td>
+      <td>@item.Fax</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CustomerId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CustomerId })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+
+<p>@Html.ActionLink("Create New", "Create")</p>

@@ -1,0 +1,20 @@
+﻿@model VAK.Models.OrderDetails
+
+@using (Html.BeginForm()) {
+  @Html.Label("Order ID")
+  @Html.TextBoxFor(m => m.OrderId)
+
+  @Html.Label("Product ID")
+  @Html.TextBoxFor(m => m.ProductId)
+
+  @Html.Label("Unit Price")
+  @Html.TextBoxFor(m => m.UnitPrice)
+
+  @Html.Label("Quantity")
+  @Html.TextBoxFor(m => m.Quantity)
+
+  @Html.Label("Discount")
+  @Html.TextBoxFor(m => m.Discount)
+
+  <input type="submit" value="Save" />
+}

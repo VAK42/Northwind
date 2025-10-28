@@ -1,0 +1,27 @@
+﻿@model IEnumerable<VAK.Models.Shippers>
+
+<table class="border">
+  <thead>
+  <tr>
+    <th>Shipper ID</th>
+    <th>Company Name</th>
+    <th>Phone</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model) {
+    <tr>
+      <td>@item.ShipperId</td>
+      <td>@item.CompanyName</td>
+      <td>@item.Phone</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ShipperId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ShipperId })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+
+<p>@Html.ActionLink("Create New", "Create")</p>

@@ -1,0 +1,11 @@
+﻿@model VAK.Models.Shippers
+
+@using (Html.BeginForm()) {
+  @Html.Label("Company Name")
+  @Html.TextBoxFor(m => m.CompanyName)
+
+  @Html.Label("Phone")
+  @Html.TextBoxFor(m => m.Phone)
+
+  <input type="submit" value="Save" />
+}

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<VAK.Models.OrderDetails>
+
+<table class="border">
+  <thead>
+  <tr>
+    <th>Order ID</th>
+    <th>Product ID</th>
+    <th>Unit Price</th>
+    <th>Quantity</th>
+    <th>Discount</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  @foreach (var item in Model) {
+    <tr>
+      <td>@item.OrderId</td>
+      <td>@item.ProductId</td>
+      <td>@item.UnitPrice</td>
+      <td>@item.Quantity</td>
+      <td>@item.Discount</td>
+      <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+
+<p>@Html.ActionLink("Create New", "Create")</p>
